@@ -100,7 +100,7 @@ init([]) ->
 
 create_tables() ->
     Tables = [
-              {?FOLSOM_TABLE, [set, named_table, public, {read_concurrency, true}]},
+              {?FOLSOM_TABLE, [set, named_table, public, {write_concurrency, true}, {read_concurrency, true}]},
               {?COUNTER_TABLE, [set, named_table, public, {write_concurrency, true}]},
               {?GAUGE_TABLE, [set, named_table, public, {write_concurrency, true}]},
               {?HISTOGRAM_TABLE, [set, named_table, public, {write_concurrency, true}]},
